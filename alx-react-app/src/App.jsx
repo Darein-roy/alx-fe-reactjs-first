@@ -7,7 +7,7 @@ import Header from './components/Header';
 import MainContent from './components/MainContent'; 
 import Footer from './components/Footer'; 
 import UserProfile from './components/UserProfile'; 
-import WelcomeMassage from './components/WelcomeMessage';
+import WelcomeMessage from './components/WelcomeMessage';
 
 function App() {
     const [count, setCount] = useState(0);
