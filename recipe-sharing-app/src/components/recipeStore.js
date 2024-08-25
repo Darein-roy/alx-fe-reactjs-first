@@ -1,6 +1,6 @@
 import create from 'zustand';
 
-const useRecipeStore = create(set => ({
+const addRecipe = create(set => ({
   recipes: [],
   favorites: [],
   addFavorite: (recipeId) => set(state => ({
@@ -10,7 +10,7 @@ const useRecipeStore = create(set => ({
     favorites: state.favorites.filter(id => id !== recipeId)
   })),
   recommendations: [],
-  generateRecommendations: () => set(state => {
+  setRecipes: () => set(state => {
     const recommended = state.recipes.filter(recipe =>
       state.favorites.includes(recipe.id) && Math.random() > 0.5
     );
