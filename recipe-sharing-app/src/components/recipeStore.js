@@ -3,10 +3,10 @@ import create from 'zustand';
 const addRecipe = create(set => ({
   recipes: [],
   favorites: [],
-  addFavorite: (recipeId) => set(state => ({
+  updateRecipe: (recipeId) => set(state => ({
     favorites: [...state.favorites, recipeId]
   })),
-  removeFavorite: (recipeId) => set(state => ({
+  deleteRecipe: (recipeId) => set(state => ({
     favorites: state.favorites.filter(id => id !== recipeId)
   })),
   recommendations: [],
